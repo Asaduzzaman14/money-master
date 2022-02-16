@@ -32,3 +32,26 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 
 })
+document.getElementById('save-btn').addEventListener('click', function () {
+    let TotalBalanceText = document.getElementById('total-blance')
+    let blance = TotalBalanceText.innerText;
+
+    // saving value
+    let savingInput = document.getElementById('saaving-input')
+    let savingInputValue = parseFloat(savingInput.value)
+
+    let saveingAmount = (blance / 100) * savingInputValue
+
+    let remainingBlance = blance - saveingAmount;
+
+    console.log(saveingAmount, 'save');
+    console.log(remainingBlance, 'balance')
+
+    let savingAmount = document.getElementById('saving-amount').innerText
+    savingAmount = saveingAmount
+
+
+    let remainningBlance = document.getElementById('Remaining-balance')
+    remainningBlance.innerText = RemainingBlance
+
+})
