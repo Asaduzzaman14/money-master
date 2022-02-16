@@ -47,11 +47,10 @@ document.getElementById('save-btn').addEventListener('click', function () {
     console.log(saveingAmount, 'save');
     console.log(remainingBlance, 'balance')
 
-    let savingAmount = document.getElementById('saving-amount').innerText
-    savingAmount = saveingAmount
 
 
-    let remainningBlance = document.getElementById('Remaining-balance')
-    remainningBlance.innerText = RemainingBlance
+    document.getElementById('saving-amount').innerText = saveingAmount
+    document.getElementById('remaining-balance').innerText = remainingBlance
+
 
 })
