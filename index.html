@@ -6,11 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
+    <main>
+        <section class="container m-2 mx-auto">
+            <h1 class="heading">Money master</h1>
+            <div class="row">
+                <div class="col-md-6 img">
+                    <img class="w-100" src="Pexels Photo by Karolina Grabowska.png" alt="" </div>
 
-    <h1>helo world</h1>
+                </div>
+
+
+
+
+                <!-- Calculate div  -->
+                <div class="col-md-6">
+                    <div class="calculat p-4 ">
+                        <h2 class="calc-hading">Income</h2>
+
+                        <div class="income-section ">
+
+                            <label for="income">
+                                <h5 class="input-name"> Income:</h5>
+                                <input class="" type="text">
+
+                            </label>
+
+                        </div>
+
+                        <h2 class="expenses-heading">Expenses</h2>
+                        <div class="expenses mb-3">
+                            <label class="" for="Food">
+                                <h5 class="input-name"> food:</h5>
+                                <input type="text">
+                            </label>
+
+                            <label for="rent">
+                                <h5 class="input-name"> Rent:</h5>
+                                <input type="text">
+                            </label>
+
+                            <label for=" Clothes">
+                                <h5 class="input-name"> Clothes:</h5>
+                                <input type="text">
+                            </label>
+                            <button class="button btn-calculate">Calculate</button>
+
+                        </div>
+
+                        <div class="mb-4 ">
+                            <h3>Total Expenses: <span>00</span> </h3>
+                            <h3>Balance: <span>00</span> </h3>
+                        </div>
+
+                        <div class="save">
+
+                            <label class="w-50 mb-3" for="save">
+                                <h5 class="input-name"> save:</h5>
+                                <input class="w-50" type="text">
+                            </label>
+                            <span class="fs-4 mx-2 ">%</span>
+                            <button class="button btn-save">Save</button>
+                        </div>
+
+                        <div>
+                            <h3>Saving Amiount: <span class="saving">00</span> </h3>
+                            <h3>Remaining Balance:<span class="saving">00</span> </h3>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+        </section>
+    </main>
+
 
 </body>
 
