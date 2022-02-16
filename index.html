@@ -32,7 +32,7 @@
 
                             <label for="income">
                                 <h5 class="input-name"> Income:</h5>
-                                <input class="" type="text">
+                                <input id="income-input" type="text">
 
                             </label>
 
@@ -42,25 +42,25 @@
                         <div class="expenses mb-3">
                             <label class="" for="Food">
                                 <h5 class="input-name"> food:</h5>
-                                <input type="text">
+                                <input id="food-input" type="text">
                             </label>
 
                             <label for="rent">
                                 <h5 class="input-name"> Rent:</h5>
-                                <input type="text">
+                                <input id="rent-input" type="text">
                             </label>
 
                             <label for=" Clothes">
                                 <h5 class="input-name"> Clothes:</h5>
-                                <input type="text">
+                                <input id="cloths-input" type="text">
                             </label>
-                            <button class="button btn-calculate">Calculate</button>
+                            <button id="calculate-btn" class="button btn-calculate">Calculate</button>
 
                         </div>
 
                         <div class="mb-4 ">
-                            <h3>Total Expenses: <span>00</span> </h3>
-                            <h3>Balance: <span>00</span> </h3>
+                            <h3>Total Expenses: <span id="total-expenses">00</span> </h3>
+                            <h3>Balance: <span id="total-blance">00</span> </h3>
                         </div>
 
                         <div class="save">
@@ -86,7 +86,7 @@
         </section>
     </main>
 
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
