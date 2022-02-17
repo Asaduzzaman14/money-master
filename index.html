@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Save Money</title>
+    <!-- bootstrap  -->
     <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+    <!-- stylesheet -->
     <link rel="stylesheet" href="./style/style.css">
+
 </head>
 
 <body>
     <main>
         <section class="container m-2 mx-auto">
-            <h1 class="heading">Money master</h1>
+            <h1 class="heading">Save Money <span><img class="icon-img" src="./images/icon.webp" alt=""></span>
+            </h1>
             <div class="row">
-                <div class="col-md-6 img">
-                    <img class="w-100" src="Pexels Photo by Karolina Grabowska.png" alt="" </div>
+                <!-- images column -->
+                <div class=" col-12 col-md-6 mb-3 img">
+                    <img class="w-100 h-100" src="./images/img-1.jpg" alt="" </div>
 
                 </div>
 
@@ -24,7 +29,7 @@
 
 
                 <!-- Calculate div  -->
-                <div class="col-md-6">
+                <div class=" col-12 col-md-6 col-lg-6 mb-3 h-100">
                     <div class="calculat p-4 ">
                         <h2 class="calc-hading">Income</h2>
 
@@ -64,7 +69,7 @@
 
                         <div class="save">
 
-                            <label class="w-50 mb-3" for="save">
+                            <label class="w-25 mb-3" for="save">
                                 <h5 class="input-name"> save:</h5>
                                 <input id="saaving-input" class="w-50" type="text">
                             </label>
@@ -72,18 +77,16 @@
                             <button id="save-btn" class="button btn-save">Save</button>
 
                             <h3>Saving Amiount: <span id="saving-amount">00</span> </h3>
-                            <h3>Remaining Balance:<span id="remaining-balance">00</span> </h3>
+                            <h3>Remaining Balance: <span id="remaining-balance">00</span> </h3>
 
                         </div>
 
-
                     </div>
-
 
                 </div>
         </section>
     </main>
-
+    <!-- script file sorce -->
     <script src="./js/script.js"></script>
 </body>
 

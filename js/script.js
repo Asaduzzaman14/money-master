@@ -1,5 +1,5 @@
 
-
+// get income value
 function getIncomeValue() {
     let IncomeInput = document.getElementById('income-input')
 
@@ -8,29 +8,37 @@ function getIncomeValue() {
 
 }
 
-function getExpance(inputId) {
+// ger all Expenses  input value and some valedation
+function getExpenses(inputId) {
 
     let foodInput = document.getElementById(inputId + '-input')
 
-    let foodInputValue = parseFloat(foodInput.value);
+    if (foodInput.value < 0) {
+        return alert('input is low')
 
-    return foodInputValue;
+    } else {
+
+        let foodInputValue = parseFloat(foodInput.value);
+        return foodInputValue;
+
+    }
+
 
 
 }
 
-
+// add all Expenses value and re use same function
 function getExpanceValue() {
-    let foodInputValue = getExpance('food')
-    let rentInputValu = getExpance('rent')
-    let cothInputValue = getExpance('cloths')
+    let foodInputValue = getExpenses('food')
+    let rentInputValu = getExpenses('rent')
+    let cothInputValue = getExpenses('cloths')
     let add = foodInputValue + rentInputValu + cothInputValue;
 
     return add;
 }
 
 
-//  calculate btn event handling
+//  calculate button event handling
 document.getElementById('calculate-btn').addEventListener('click', function () {
 
 
@@ -55,32 +63,28 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 // save button evant handling
 document.getElementById('save-btn').addEventListener('click', function () {
-    let TotalBalanceText = document.getElementById('total-blance')
-    let blance = TotalBalanceText.innerText;
-
-    // saving value
-
 
     let savingInput = document.getElementById('saaving-input')
+
+    if (savingInput.value < 0 || isNaN(savingInput.value)) {
+        return alert('parsentage input in wrong')
+    }
+
     let savingInputValue = parseFloat(savingInput.value)
 
-    if (blance == 0) {
-        return alert('balance value undefind!')
-    }
-    else if (savingInputValue < 0) {
-        return alert('enter valid saving parsentage')
+    let TotalBalanceText = document.getElementById('total-blance')
+    let TotalBalanceValu = TotalBalanceText.innerText
+
+
+    let saveingAmount = (getIncomeValue() / 100) * savingInputValue
+    if (TotalBalanceValu < saveingAmount) {
+        return alert('you have no money')
     } else {
-
-        let saveingAmount = (blance / 100) * savingInputValue
-
-        let remainingBlance = blance - saveingAmount;
         document.getElementById('saving-amount').innerText = saveingAmount
-        document.getElementById('remaining-balance').innerText = remainingBlance
 
     }
 
-
-
-
+    let remainingBalance = TotalBalanceValu - saveingAmount
+    document.getElementById('remaining-balance').innerText = remainingBalance
 
 })
