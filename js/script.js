@@ -67,7 +67,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
     let savingInput = document.getElementById('saaving-input')
 
-    if (savingInput.value < 0 || isNaN(savingInput.value)) {
+    if (savingInput.value < 0 || isNaN(savingInput)) {
         return alert('parsentage input in wrong')
     }
 
