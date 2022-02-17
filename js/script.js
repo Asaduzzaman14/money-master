@@ -14,7 +14,8 @@ function getExpenses(inputId) {
     let foodInput = document.getElementById(inputId + '-input')
 
     if (foodInput.value < 0) {
-        return alert('input is low')
+        // let err = document.getElementById('error')
+        // err.classList.add = ''
 
     } else {
 
