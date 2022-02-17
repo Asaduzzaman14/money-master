@@ -30,9 +30,9 @@ function getExpenses(inputId) {
 
 // add all Expenses value and re use same function
 function getExpanceValue() {
-    let foodInputValue = getExpenses('food')
-    let rentInputValu = getExpenses('rent')
-    let cothInputValue = getExpenses('cloths')
+    let foodInputValue = getExpenses('food')   // first call
+    let rentInputValu = getExpenses('rent')         //second call
+    let cothInputValue = getExpenses('cloths')      //third call same function
     let add = foodInputValue + rentInputValu + cothInputValue;
 
     return add;
