@@ -1,37 +1,50 @@
-document.getElementById('calculate-btn').addEventListener('click', function () {
-    // income input
+
+
+function getIncomeValue() {
     let IncomeInput = document.getElementById('income-input')
     let IncomeInputValu = parseFloat(IncomeInput.value);
+    return IncomeInputValu
+}
 
-    // food input 
-    let foodInput = document.getElementById('food-input')
+function getExpance(inputId) {
+
+    let foodInput = document.getElementById(inputId + '-input')
+
     let foodInputValue = parseFloat(foodInput.value);
-    // console.log(foodInputValue);
+    return foodInputValue;
 
 
-    // rent input 
-    let rentInput = document.getElementById('rent-input')
-    let rentInputValu = parseFloat(rentInput.value)
-    // console.log(rentInputValu);
+}
 
-    let clothInput = document.getElementById('cloths-input');
-    let cothInputValue = parseFloat(clothInput.value)
-    // console.log(cothInputValue);
 
-    // add all Expenses 
+
+function getExpanceValue() {
+    let foodInputValue = getExpance('food')
+    let rentInputValu = getExpance('rent')
+    let cothInputValue = getExpance('cloths')
     let add = foodInputValue + rentInputValu + cothInputValue;
+    if (add > getIncomeValue()) {
+        return alert('Expenses is heigh')
+    }
+    return add;
+}
 
-    let balance = IncomeInputValu - add
+
+//  calculate btn event handling
+document.getElementById('calculate-btn').addEventListener('click', function () {
+
+    let balance = getIncomeValue() - getExpanceValue()
 
     let TotalExpanceText = document.getElementById('total-expenses')
-    TotalExpanceText.innerText = add
+    TotalExpanceText.innerText = getExpanceValue()
 
     let TotalBalanceText = document.getElementById('total-blance')
     TotalBalanceText.innerText = balance
 
-
-
 })
+
+
+// save button evant handling
 document.getElementById('save-btn').addEventListener('click', function () {
     let TotalBalanceText = document.getElementById('total-blance')
     let blance = TotalBalanceText.innerText;
@@ -43,10 +56,6 @@ document.getElementById('save-btn').addEventListener('click', function () {
     let saveingAmount = (blance / 100) * savingInputValue
 
     let remainingBlance = blance - saveingAmount;
-
-    console.log(saveingAmount, 'save');
-    console.log(remainingBlance, 'balance')
-
 
 
     document.getElementById('saving-amount').innerText = saveingAmount
