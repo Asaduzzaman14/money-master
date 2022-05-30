@@ -45,7 +45,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     let balance = getIncomeValue() - getExpanceValue()
 
-    if (balance < 0 || isNaN(balance)) {
+    if (balance < 0 || isNaN(!balance)) {
         return alert('incorrect your input Value!')
     }
     else {
@@ -67,7 +67,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
     let savingInput = document.getElementById('saaving-input')
 
-    if (savingInput.value < 0 || isNaN(savingInput)) {
+    if (savingInput.value < 0) {
         return alert('parsentage input in wrong')
     }
 
